@@ -20,6 +20,15 @@
 		u-boot,spl-payload-offset = <0x100000>;
 	};
 
+	leds {
+		compatible = "gpio-leds";
+
+		led-0 {
+			gpios = <&aongpio 3 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+	};
+
 	memory@40000000 {
 		bootph-pre-ram;
 	};
